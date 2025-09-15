@@ -1,0 +1,16 @@
+name: Ci
+
+on:
+    push: 
+        branches: [main]
+
+jobs: 
+    build:
+        runs-on: 'ubuntu_latest'
+        steps:
+        - name: 'Build'
+          run: |
+                echo 'Build...'
+                echo '10101010' >> build.bin
+                
+
