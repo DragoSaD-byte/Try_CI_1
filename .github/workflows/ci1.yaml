@@ -6,7 +6,7 @@ on:
 
 jobs: 
     build:
-        runs-on: 'ubuntu_latest'
+        runs-on: self-hosted
         steps:
         - name: 'Build'
           run: |
