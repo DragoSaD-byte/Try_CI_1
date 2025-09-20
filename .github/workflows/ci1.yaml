@@ -16,5 +16,5 @@ jobs:
               run: |
                 python runer.py 1 2 3 4 > log.bin
     test:
-        uses: DragoSaD-byte/Try_CI_2/.github/workflows/ci2_call.yml@main
+        uses: DragoSaD-byte/Try_CI_2/blob/main/.github/workflows/ci2_call.yaml@main
 
