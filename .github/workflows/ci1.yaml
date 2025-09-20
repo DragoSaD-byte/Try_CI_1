@@ -15,6 +15,15 @@ jobs:
             - name: 'Run'
               run: |
                 python runer.py 1 2 3 4 > log.bin
+            - name: 'Upload artifact'
+              uses: actions/upload-artifact@v4
+              with:
+                name: log-file
+                path: log.bin
     test:
+        needs: build
         uses: DragoSaD-byte/Try_CI_2/.github/workflows/ci2_call.yaml@main
+        with:
+            name: log-file
+            path: log.bin
 
