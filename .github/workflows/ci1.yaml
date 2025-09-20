@@ -8,9 +8,11 @@ jobs:
     build:
         runs-on: self-hosted
         steps:
-        - name: 'Build'
-          run: |
-                echo 'Build...'
-                echo '10101010' >> build.bin
-                
+            - name: 'Run'
+              run: |
+                    echo 'import sys \
+if __name__ == "__main__": \
+    for param in sys.argv:\
+        print (param) ' >> test.py
+                    python test.py
 
