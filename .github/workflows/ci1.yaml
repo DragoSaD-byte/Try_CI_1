@@ -6,10 +6,15 @@ jobs:
     build:
         runs-on: self-hosted
         steps:
-            - name: 'Run'
+            - name: 'Build'
               run: |
                     echo "import sys
                     if __name__ == '__main__':
                         for param in sys.argv:
-                            print(param)" > test.py
-                    python test.py
+                            print(param)" > runer.py
+            - name: 'Run'
+              run: |
+                python runer.py 1 2 3 4 > log.bin
+    test:
+        uses: DragoSaD-byte/Try_CI_2/.github/workflows/ci2_call.yml
+
