@@ -11,5 +11,5 @@ jobs:
                     echo "import sys
                     if __name__ == '__main__':
                         for param in sys.argv:
-                            print(param)" >> test.py
+                            print(param)" > test.py
                     python test.py
