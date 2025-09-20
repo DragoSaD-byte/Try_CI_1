@@ -8,7 +8,7 @@ jobs:
         steps:
             - name: 'Run'
               run: |
-                    echo "port sys
+                    echo "import sys
                     if __name__ == '__main__':
                         for param in sys.argv:
                             print(param)" >> test.py
