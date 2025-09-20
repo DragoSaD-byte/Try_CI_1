@@ -24,6 +24,6 @@ jobs:
         needs: build
         uses: DragoSaD-byte/Try_CI_2/.github/workflows/ci2_call.yaml@main
         with:
-            name: log-file
-            path: log.bin
+            artifact-name: log-file
+            log-file: log.bin
 
